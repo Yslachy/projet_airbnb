@@ -1,0 +1,36 @@
+<div class="card" (click)="openWindow()">
+  <div class="img-wrapper">
+    <img
+      class="log-img"
+      [src]="'data:image/jpeg;base64,' + logement.image"
+      alt="Description de l'image"
+    />
+    <div class="coeur-container">
+      <img
+        class="coeur"
+        src="../../../assets/img/9b9894b8-d49e-4e6c-af97-217721ec7bdf.svg"
+        alt="Home Image"
+      />
+    </div>
+  </div>
+
+  <div class="logement">
+    <div class="log-main">
+      <p class="log-city">{{ logement.city.name }}, France</p>
+      <p class="log-date">11-18 oct</p>
+      <p class="log-description">Vu plage et ocean</p>
+      <p class="log-price">
+        <strong>{{ logement.price }}€</strong> par nuit
+      </p>
+    </div>
+
+    <div class="log-rating">
+      <img
+        class="etoile"
+        src="../../../assets/img/1fa834c6-71f9-4a6b-9c4a-43a88cb2a3d7.svg"
+        alt="Home Image"
+      />
+      <p class="log-number">{{ logement.rating }}</p>
+    </div>
+  </div>
+</div>

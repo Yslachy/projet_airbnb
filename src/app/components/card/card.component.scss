@@ -1,0 +1,71 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligner verticalement */
+  width: 100%;
+  height: 100%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 9px;
+
+  .img-wrapper {
+    display: flex;
+    height: 80%;
+    width: 100%;
+    overflow: hidden;
+
+    .log-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 5%; //rend les coins des
+      object-fit: cover; //permet de rogner pour faire entrer 
+      //des images rectangles dans des carrés sans déformations
+    }
+
+    .coeur-container {
+      position: absolute; //reste fixe par rapport au composant parent
+      width: 23%;
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      .coeur {
+        margin: 0.5rem;
+        cursor: pointer;
+        width: 24px;
+        fill-opacity: unit($number: 100);
+      }
+    }
+  }
+
+  .logement {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .log-main {
+      padding: 1rem;
+      .log-city {
+        font-weight: bold;
+      }
+
+      .log-date {
+        color: grey;
+      }
+
+      .log-description {
+        color: grey;
+      }
+    }
+
+    .log-rating {
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      .etoile {
+        padding-right: 5px;
+        width: 15px;
+      }
+    }
+  }
+}

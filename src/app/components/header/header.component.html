@@ -1,0 +1,71 @@
+<div class="header">
+  <div class="nav">
+    <div class="nav-left">
+      <img
+        (click)="onLogoClick()"
+        class="logo-airbnb"
+        src="../../../assets/img/airbnb_logo.png"
+        alt="Home Image"
+      />
+    </div>
+
+    <div class="nav-center">
+      <!-- Appel de la fonction onInputChange() dès qu'une lettre est saisie  -->
+      <input
+        (input)="onInputChange($event)"
+        class="destination"
+        type="text"
+        placeholder="N'importe où"
+      />
+      <!-- On affiche cette div seulement si au moins une lettre dans input -->
+      <div *ngIf="villes.length > 0 && showCity" class="villes">
+        <ul class="ul">
+          <!-- Affichage de toute les villes correspondant à l'appel API filtré -->
+          <li
+            (click)="onCityClick(ville)"
+            class="li-ville"
+            *ngFor="let ville of villes"
+          >
+            {{ ville.nom }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="date">Une semaine</div>
+
+      <div class="ajout">
+        Ajouter des voyageurs
+        <img
+          id="loupe"
+          src="../../../assets/img/256cc226-b682-43ac-8a81-593007c8d9dd.svg"
+          alt="Home Image"
+        />
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="logement">Mettre mon logement sur Airbnb</div>
+
+      <img
+        id="globe"
+        src="../../../assets/img/85f145aa-856e-4532-becf-cc5821c0fbae.svg"
+        alt="Home Image"
+      />
+
+      <div class="account">
+        <img
+          id="personnage"
+          src="../../../assets/img/hamburger_icon.svg"
+          alt="Home Image"
+        />
+        <img
+          id="personnage"
+          src="../../../assets/img/bd9045e2-3296-4268-87d6-857f437d2f38.svg"
+          alt="Home Image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="filters"></div>
+</div>
