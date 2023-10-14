@@ -1,6 +1,7 @@
 <div class="header">
   <div class="nav">
     <div class="nav-left">
+      <!-- On renvoie vers l'URL de base en cas de click sur le logo AirBNB -->
       <img
         (click)="onLogoClick()"
         class="logo-airbnb"
@@ -17,7 +18,7 @@
         type="text"
         placeholder="N'importe où"
       />
-      <!-- On affiche cette div seulement si au moins une lettre dans input -->
+      <!-- On affiche cette div seulement si au moins une lettre dans input et showCity==true-->
       <div *ngIf="villes.length > 0 && showCity" class="villes">
         <ul class="ul">
           <!-- Affichage de toute les villes correspondant à l'appel API filtré -->

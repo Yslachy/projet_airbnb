@@ -9,10 +9,10 @@ import { Logement } from '../models/Logement';
 export class GetAccomodationsService {
 
   myInput: string = '';
-  
   private dataBaseURL: string = "http://localhost:3000/api/accomodations"
 
-  constructor(private http: HttpClient) {}
+  //import du service 'HttpClient' pour pouvoir faire un appel API dans getAccomodation
+  constructor(private http: HttpClient) {}  
 
   getAccomodation() {
     //le get fait un appel API vers l'URL spécifié qui retourne un JSON

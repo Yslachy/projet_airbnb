@@ -30,7 +30,7 @@
 
       .coeur {
         margin: 0.5rem;
-        cursor: pointer;
+        cursor: pointer;  //change la souris en pointer cliquable au passage sur le coeur
         width: 24px;
         fill-opacity: unit($number: 100);
       }

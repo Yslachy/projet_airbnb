@@ -4,11 +4,10 @@ import { HomeComponent } from './components/home/home.component';
 import { DetailComponent } from './components/detail/detail.component';
 
 const routes: Routes = [
-  {path: 'home', component: HomeComponent},
+  //ici, router-outlet remplacé par HomeComponent lorsque URL = <socket>/home
+  {path: 'home', component: HomeComponent}, //
   {path: '', redirectTo: 'home', pathMatch: 'full'},
-  {path: 'detail/:id', component: DetailComponent}
-  
-
+  {path: 'detail/:id', component: DetailComponent} //redirection pour le détail des logements
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 <div class="card" (click)="openWindow()">
   <div class="img-wrapper">
+    <!-- Ici on récupère le code de l'image encore encodé d'où le "jpeg;base64"' pour décodage-->
     <img
       class="log-img"
       [src]="'data:image/jpeg;base64,' + logement.image"
@@ -14,6 +15,7 @@
     </div>
   </div>
 
+  <!-- Affichage des infos de notre logement via l'interface créé dans ce but. -->
   <div class="logement">
     <div class="log-main">
       <p class="log-city">{{ logement.city.name }}, France</p>

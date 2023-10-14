@@ -1,5 +1,9 @@
 <div class="home">
     <div class="cards">
+        <!-- Implémentation du composant 'Card' et affichage de tout les éléments du tableau
+        de logement filtré dans "home.component.ts" via directive angular '*ngFor' 
+        Les crochets de propriété '[]' permettent de transférer les donnés entre composant.
+        Ici celà permet de récupérer la valeur de la variable 'Logement' du composant enfant 'card'-->
         <app-card class="card"
         [logement]="logement"
         *ngFor="let logement of filteredAccomodations">

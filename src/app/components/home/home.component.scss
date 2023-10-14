@@ -4,12 +4,12 @@
     flex-direction: column;
     width: 100%; //100% de l'écran
 
-    .cards {
+    .cards { //wrapper qui va contenir toutes nors cards
         display: flex;
         flex-wrap: wrap;  //permet de mettre à la ligne les cartes qui dépassent
         gap: 0.5rem;
         width: 100%; //100% de home
-        justify-content: space-evenly;
+        justify-content: space-evenly; //même espace entre chaque card
 
         .card {
             width: 23%; //une carte prend 23% de l'élément cards
